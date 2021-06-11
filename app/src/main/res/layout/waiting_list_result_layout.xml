@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/waiting_list_result">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrey2"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kamis, 2 Maret 2017 - 16:00 WIB"
+                android:id="@+id/date_updated"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/text_size_caption_material"/>
+            <ImageButton
+                android:id="@+id/refresh"
+                android:layout_toRightOf="@+id/date_updated"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_refresh_circle_24_dp"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_30">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="Sushi Tei Mall Kelapa Gading"
+                android:id="@+id/outlet_name"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/text_size_large_material"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_queue"
+                    android:layout_marginTop="4dp"
+                    android:textSize="@dimen/text_size_caption_material"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:id="@+id/last_queuing"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_large_material" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="22dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/waiting_list_queue_layout" />
+
+    </LinearLayout>
+    
+</LinearLayout>

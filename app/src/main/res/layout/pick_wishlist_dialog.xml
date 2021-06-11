@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="#00ffffff">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingTop="22dp"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="32dp"
+            android:layout_marginRight="-10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:text="Pick a Wish List Tag"
+                android:textSize="@dimen/text_size_medium_material"
+                android:textColor="@color/colorDark"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/input_bottom"
+                    android:background="@drawable/shape_rectangle_border"
+                    android:paddingRight="8dp">
+
+                    <Spinner
+                        android:id="@+id/wishlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorDark"
+                        android:spinnerMode="dropdown" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/input_layout_password"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/input_bottom"
+                    android:background="@drawable/shape_rectangle_border">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/add_wishlist_text"
+                        android:background="@android:color/transparent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="28dp"
+                        android:hint="@string/add_a_new_tag"
+                        android:textSize="13sp"
+                        android:layout_weight="0.2"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-10dp"
+                        android:background="@drawable/border_left_search">
+                        <android.support.v7.widget.AppCompatButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/add_button"
+                            android:background="@drawable/zzz_plus"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/input_layout_email"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/wishlist_button"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginLeft="@dimen/button_inset_vertical_material"
+                        android:background="@drawable/shape_rectanglebutton"
+                        android:text="@string/action_wishlist"
+                        android:textColor="@color/colorWhite"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

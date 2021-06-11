@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.cranium.sushiteiapps"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 48
+        versionName '1.59'
+    }
+
+    packagingOptions{
+        pickFirst 'META-INF/LICENSE.txt'
+    }
+
+    repositories{
+        mavenCentral()
+        jcenter()
+        maven{
+            url "https://maven.java.net/content/groups/public/"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    dexOptions {
+        jumboMode = true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+    implementation 'com.android.support:multidex:1.0.0'
+//    implementation 'com.android.support:appcompat-v7:27.1.0'
+//    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.google.firebase:firebase-core:11.4.2'
+    implementation 'com.google.firebase:firebase-messaging:11.4.2'
+    implementation 'com.google.firebase:firebase-crash:11.4.2'
+    implementation 'com.google.firebase:firebase-auth:11.4.2'
+    implementation 'com.firebaseui:firebase-ui-auth:3.1.0'
+    testImplementation 'junit:junit:4.12'
+    // gms services for maps and location
+    implementation 'com.google.android.gms:play-services-maps:11.4.2'
+    implementation 'com.google.android.gms:play-services-location:11.4.2'
+    // card view
+//    implementation 'com.android.support:cardview-v7:27.1.0'
+    // custom for textview
+    implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
+    // restful handle
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    // material design
+    implementation 'com.pavelsikun:materialdesignicons:1.0'
+    //intro app
+    implementation 'com.github.apl-devs:appintro:v4.2.0'
+    //multiple image select
+    implementation 'com.github.vansikrishna:Multimager:1.0.8'
+    implementation 'com.github.darsh2:MultipleImageSelect:3474549'
+    // image slider
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    implementation 'com.sw926.imagefileselector:library:1.0.10'
+    //Tasty toast for custom toast
+    implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
+    // Annotate fields with @BindView and a view ID alternate for findViewById
+    implementation 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    // For Parsing HTML and get apps version from playstore
+    implementation 'org.jsoup:jsoup:1.11.2'
+    implementation 'com.github.javiersantos:AppUpdater:2.6.5'
+
+    implementation 'com.github.florent37:fiftyshadesof:1.0.0'
+
+    implementation 'org.apache.commons:commons-collections4:4.1'
+
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+
+    implementation 'com.judemanutd:autostarter:1.0.0'
+
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:mediarouter-v7:27.1.0'
+    implementation 'com.android.support:recyclerview-v7:27.1.0'
+    implementation 'com.android.support:cardview-v7:27.1.0'
+    implementation 'com.android.support:support-v13:27.1.0'
+    implementation 'com.android.support:support-v4:27.1.0'
+
+    implementation files('activation.jar')
+    implementation files('additionnal.jar')
+    implementation files('mail.jar')
+    implementation files('wversionmanager-1.3.jar')
+}
+
+apply plugin: 'com.google.gms.google-services'

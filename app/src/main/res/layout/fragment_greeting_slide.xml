@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:src="@drawable/image_720x540"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Do you know? Salmon is full of nutrients,
+including Omega-3 fatty acids, vitamins A, D
+B12. Omega-3 fatty acids provide many health,
+reduces high blood pressure, improve eye health,
+and prevents obesity"
+        fontPath="fonts/latoLight.ttf"
+        tools:ignore="MissingPrefix"
+        android:lineSpacingExtra="6dp"
+        android:gravity="top|center_horizontal"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textSize="@dimen/text_size_small_material"
+        android:background="@color/colorBlackOpacity"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorWhite"/>
+
+</RelativeLayout>

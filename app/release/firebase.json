@@ -1,0 +1,78 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Firebase - Rest sandbox",
+		"_postman_id": "d8690460-c790-4b0f-64bf-d16f7ece0225",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All objects",
+			"request": {
+				"url": "https://YOUR-FIREBASE-INSTANCE-ID.firebaseio.com/tasks.json",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Insert an object",
+			"request": {
+				"url": "https://YOUR-FIREBASE-INSTANCE-ID.firebaseio.com/tasks.json",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"firstname\":\"fourth\",\n\t\"lastname\": \"record\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update  an object",
+			"request": {
+				"url": "https://YOUR-FIREBASE-INSTANCE-ID.firebaseio.com/tasks/-KfbYYnJDdJ1IfQ4D6bl.json",
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\"lastname\":\"just lastname updated\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete  an object",
+			"request": {
+				"url": "https://YOUR-FIREBASE-INSTANCE-ID.firebaseio.com/tasks/-KfpMaGp314IH1AP386k.json",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete a key from an object",
+			"request": {
+				"url": "https://YOUR-FIREBASE-INSTANCE-ID.firebaseio.com/tasks/-KfpLx-0L-qXUG22w7Z4/lastname.json",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "841599838028",
+    "firebase_url": "https://sushi-tei-23853.firebaseio.com",
+    "project_id": "sushi-tei-23853",
+    "storage_bucket": "sushi-tei-23853.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841599838028:android:c1031e445898a320",
+        "android_client_info": {
+          "package_name": "com.cranium.sushiteiapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841599838028-pbg2fuvj4escuaaf11mq57aqr0405kg1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cranium.sushiteiapps",
+            "certificate_hash": "c01eb3695514c8beefc13a8b75c2205990f5a244"
+          }
+        },
+        {
+          "client_id": "841599838028-115ni8dugpbortgbnno4qopo3b2jcvb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUtiHzTL2yVaiYDoW6-76alrgz5RaoAO8"
+//          "current_key": "AIzaSyBSLB_4rn3cI-TAePommPqGOgD-W2AcQMQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841599838028-115ni8dugpbortgbnno4qopo3b2jcvb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

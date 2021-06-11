@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/promo_banner_slider"
+        android:layout_width="match_parent"
+        android:layout_height="170dp" />
+
+    <com.daimajia.slider.library.Indicators.PagerIndicator
+        android:id="@+id/promo_banner_slider_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        app:selected_color="@color/colorAccent"
+        app:unselected_color="@color/colorWhite"
+        android:background="@android:color/transparent"
+        app:shape="oval"
+        app:selected_padding_left="2dp"
+        app:selected_padding_right="2dp"
+        app:unselected_padding_left="2dp"
+        app:unselected_padding_right="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:selected_width="11dp"
+        app:selected_height="11dp"
+        app:unselected_width="11dp"
+        app:unselected_height="11dp"
+        android:layout_marginTop="-26dp"
+        android:layout_marginBottom="@dimen/control_inset_material_end"
+        android:layout_marginRight="@dimen/control_inset_material_end"/>
+
+</LinearLayout>

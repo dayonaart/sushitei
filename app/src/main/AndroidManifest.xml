@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cranium.sushiteiapps">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name="android.support.multidex.MultiDexApplication"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:name="android.max_aspect" android:value="2.1" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD4qLRduQPTsDonxw--VjTBKEP_NXTUB20" />
+
+        <!-- Firebase Notifications -->
+        <service android:name="com.cranium.sushiteiapps.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".service.BootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.BService"
+            android:enabled="true"
+            android:stopWithTask="false" />
+        <service android:name="com.cranium.sushiteiapps.service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.AllowLocationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.GreetingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.ForgotPasswordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.AboutSushiteiActivity"
+            android:label="@string/about_sushitei_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.DisclaimerSushiteiActivity"
+            android:label="@string/disclaimer_sushitei_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.FaqSushiteiActivity"
+            android:label="@string/faq_sushitei_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.TermAndConditionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.RegisterSuccessActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.RegisterActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.MyCardActivity"
+            android:label="@string/my_card_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.EditProfileActivity"
+            android:label="@string/edit_profile_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.WhatsNewActivity"
+            android:label="@string/whats_new_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.WhatsNewDetailActivity"
+            android:label="@string/whats_new_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.WhatsNewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.WhatsNewActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.MenuDetailListActivity"
+            android:label="@string/menu_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.MenuDetailActivity"
+            android:label="@string/menu_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MenuDetailListActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MenuDetailListActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.MenuCategoryListActivity"
+            android:label="@string/menu_category_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.OutletDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.OutletMapActivity"
+            android:label="@string/map_direction"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.OutletDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.OutletDetailActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.ContactUsActivity"
+            android:label="@string/contact_us_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.MessageActivity"
+            android:label="@string/message_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+            <intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.VoucherActivity"
+            android:label="@string/voucher_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+            <intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.MessageDetailActivity"
+            android:label="@string/message_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MessageActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MessageActivity" />
+            <intent-filter>
+                <action android:name="com.cranium.sushitei.firebase.message.NEW_NOTIFICATION"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.VoucherDetailActivity"
+            android:label="@string/voucher_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.VoucherActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.VoucherActivity" />
+            <intent-filter>
+                <action android:name="com.cranium.sushitei.firebase.voucher.NEW_NOTIFICATION"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.VoucherMessageActivity"
+            android:label="Message/voucher"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+            <intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.PointHistoryActivity"
+            android:label="@string/history_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.WishListActivity"
+            android:label="@string/message_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.WishListAddActivity"
+            android:label="@string/message_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.WishListActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.WishListActivity" />
+        </activity>
+        <activity
+            android:name="com.cranium.sushiteiapps.activity.WishListEditActivity"
+            android:label="@string/message_title"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.cranium.sushiteiapps.activity.WishListActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cranium.sushiteiapps.activity.WishListActivity" />
+        </activity>
+
+        <activity
+            android:name="com.cranium.sushiteiapps.util.GalleryImage"
+            android:theme="@style/MultipleImageSelectTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

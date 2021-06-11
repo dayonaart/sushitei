@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/action_back_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="hideRightDrawer"
+            app:srcCompat="@drawable/ic_chevron_right_white_24dp" />
+
+        <TextView
+            android:id="@+id/action_back_right_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/action_back_right"
+            android:text="@string/app_back"
+            android:textAllCaps="true"
+            android:onClick="hideRightDrawer"
+            android:gravity="right"
+            android:textColor="@color/colorWhite"
+            fontPath="fonts/latoLight.ttf"
+            tools:ignore="MissingPrefix"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/colorWhite"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/edit_profile_button">
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="match_parent">
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/splash_logo"/>
+
+            <ProgressBar
+                android:id="@+id/image_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+            <ImageButton
+                android:id="@+id/image_upload_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/image"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_rectanglebutton_secondary"
+                android:src="@drawable/ic_edit_24_dp" />
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/image_upload_button_ed"
+                style="?android:textAppearanceSmall"
+                fontPath="fonts/latoRegular.ttf"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/shape_rectanglebutton_outline"
+                android:text="EDIT"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp"
+                tools:ignore="MissingPrefix" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Joshua Abimaulana"
+                android:singleLine="true"
+                android:onClick="hideRightDrawer"
+                android:textColor="@color/colorBlack"
+                fontPath="fonts/latoRegular.ttf"
+                tools:ignore="MissingPrefix"
+                android:textSize="16sp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="joshua_abimana@gmail.com"
+                android:singleLine="true"
+                android:onClick="hideRightDrawer"
+                android:textColor="@color/colorBlack"
+                fontPath="fonts/latoLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textSize="13sp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0895859585"
+                android:singleLine="true"
+                android:onClick="hideRightDrawer"
+                android:textColor="@color/colorBlack"
+                fontPath="fonts/latoLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textSize="13sp"/>
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/statusmember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status Member: Permanent"
+                android:singleLine="true"
+                android:onClick="hideRightDrawer"
+                android:textColor="@color/colorBlack"
+                fontPath="fonts/latoLight.ttf"
+                tools:ignore="MissingPrefix"
+                android:textSize="13sp"
+                android:layout_marginBottom="20dp"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/show_my_card_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rectanglebutton_outline"
+                android:text="@string/action_show_my_card"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                fontPath="fonts/latoRegular.ttf"
+                tools:ignore="MissingPrefix"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/shape_border_top"
+        android:onClick="hideRightDrawer"
+        android:id="@+id/my_point_history">
+        <TextView
+            android:id="@+id/my_point_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_point"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            fontPath="fonts/latoRegular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textSize="@dimen/text_size_medium_material"
+            android:layout_marginBottom="2dp"/>
+
+
+        <ImageButton
+            android:id="@+id/refresh"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/my_point_text"
+            android:layout_toRightOf="@+id/my_point_text"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_refresh_circle_24_dp" />
+
+        <LinearLayout
+            android:gravity="right"
+            android:orientation="vertical"
+            android:layout_below="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/point_expired_date"
+                fontPath="fonts/latoRegular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:scrollHorizontally="false"
+                android:singleLine="true"
+                android:text="Point Expired Per 30 June 2017 = 0"
+                android:textColor="@color/colorDark"
+                android:textSize="@dimen/text_size_caption_material"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/point"
+            android:layout_below="@+id/my_point_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="300"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            fontPath="fonts/latoRegular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textSize="35sp"
+            android:layout_marginBottom="2dp"/>
+
+        <ImageView
+            android:id="@+id/goto_history"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="-15dp"
+            android:src="@drawable/zzz_chevron_right"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/last_updated_point"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Update: 30 June 2017, 10:00 AM"
+            android:singleLine="true"
+            fontPath="fonts/latoRegular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textColor="@color/colorDark"
+            android:textSize="@dimen/text_size_caption_material"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/shape_border_top"
+        android:onClick="hideRightDrawer"
+        android:id="@+id/faq_relative">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/faq"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            fontPath="fonts/latoRegular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textSize="@dimen/text_size_medium_material"
+            android:layout_marginBottom="2dp"/>
+
+        <ImageButton
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_faq_outline_24_dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:scaleType="fitCenter"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/shape_border_top"
+        android:onClick="hideRightDrawer"
+        android:id="@+id/disclaimer_relative">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disclaimer"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            fontPath="fonts/latoRegular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textSize="@dimen/text_size_medium_material"
+            android:layout_marginBottom="2dp"/>
+
+        <ImageButton
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_disclaimer_outline_24_dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:scaleType="fitCenter"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/shape_border_top"
+        android:onClick="hideRightDrawer"
+        android:id="@+id/about_relative">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_sushitei"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            fontPath="fonts/latoRegular.ttf"
+            tools:ignore="MissingPrefix"
+            android:textSize="@dimen/text_size_medium_material"
+            android:layout_marginBottom="2dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="20dp"
+        android:background="@drawable/shape_border_top"
+        android:onClick="hideRightDrawer">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/logout_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectanglebutton"
+            android:text="@string/action_logout"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontInputBig" />
+
+    </RelativeLayout>
+
+</LinearLayout>

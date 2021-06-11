@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">Sushi Tei</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="app_back">Back</string>
+    <string name="whats_new_title">What\'s New</string>
+    <string name="menu_title">Menu</string>
+    <string name="wish_list_title">Wish List</string>
+    <string name="message_title">Message</string>
+    <string name="voucher_title">Voucher</string>
+    <string name="voucher_title_public">Voucher(public)</string>
+    <string name="voucher_title_member">Voucher(member)</string>
+    <string name="store_location_title">Store Location</string>
+    <string name="contact_us_title">Contact Us</string>
+    <string name="build_version">App version</string>
+    <string name="menu_category_title">Menu Category</string>
+    <string name="outlet_title">Outlet</string>
+
+    <string name="allow_location_description">This App Would Like to \n Use Your Current Location</string>
+
+    <string name="button_allow">Allow</string>
+    <string name="button_dont_allow">Don\'t Allow</string>
+    <string name="login_title">Login</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_sign_in">Sign In</string>
+
+    <string name="last_updated_title">Last Updated</string>
+    <string name="my_card_title">My Card</string>
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="your_member_card">Your Member Card</string>
+    <string name="my_personal_information">My Personal Information</string>
+    <string name="barcode">QR Code</string>
+    <string name="qr_please">Please click on Refresh icon at history transaction page after add/redeem your point.</string>
+    <string name="change_password">Change Password</string>
+
+
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email*</string>
+    <string name="prompt_password">Password*</string>
+    <string name="action_sign_in">Log In</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">must be 6 or more characters</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="be_a_part_of">Be a part of Sushi Tei Community!\n(You can login with your Sushi Tei loyalty member \nif you are a member)</string>
+    <string name="this_feature_is_only">This feature is only for Sushi Tei Permanent Member. Please go to your Profile to check your membership status. </string>
+    <string name="this_feature_is_only2">If you have not login, please click button below. If you have not register, please go to Profile (top right button) and select About Sushi Tei Loyalty Program to read the mechanism and Terms &amp; Conditions.</string>
+    <string name="h_14">Your temporary member will be expired in about 2 weeks time. Visit us and do more transaction to become Permanent Member.</string>
+    <string name="h_reset">We are sorry to inform you that your temporary member is expired. Please press "RESET" button below to start again.</string>
+    <string name="reset">Reset</string>
+    <string name="congratulations">You are officially a Sushi Tei Member</string>
+    <string name="be_a_part_title">Be a part of our Community</string>
+    <string name="action_need_help">Forgot Password?</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="register">REGISTER</string>
+    <string name="renewal">RENEWAL</string>
+    <string name="action_register_short">Register</string>
+    <string name="title_activity_forgot">Forgot Activity</string>
+    <string name="title_activity_register">Register Activity</string>
+    <string name="prompt_email_or_phone">Email Account</string>
+    <string name="please_enter_your">Please enter your registered Email Address</string>
+    <string name="reset_your_password">Reset Your Password</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_next">Next</string>
+    <string name="prompt_re_password">Re-Enter Your Password*</string>
+    <string name="prompt_location">Location*</string>
+    <string name="prompt_mobile">Mobile Phone*</string>
+    <string name="prompt_date_of_birth">Date of Birth*</string>
+    <string name="prompt_phone">Phone Number*</string>
+    <string name="prompt_first_name">First*</string>
+    <string name="prompt_last_name">Last*</string>
+    <string name="prompt_last_name_wl">Last</string>
+    <string name="prompt_about">About*</string>
+    <string name="prompt_about_without_star">About</string>
+    <string name="prompt_message">Message</string>
+    <string name="prompt_city">City*</string>
+    <string name="prompt_select_city">Select a City</string>
+    <string name="prompt_outlet">Outlet*</string>
+    <string name="prompt_select_outlet">Select a Outlet</string>
+    <string name="prompt_comment">Comment</string>
+    <string name="prompt_date_visit">Date Visit*</string>
+    <string name="upload_photo_text">Upload Photo</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="prompt_select_location">Select a Location</string>
+    <string name="prompt_re_enter_password">Re-Enter Your Password*</string>
+    <string name="prompt_old_password">Old Password*</string>
+    <string name="prompt_new_password">New Password*</string>
+    <string name="prompt_visitor_count">Number of Visitors*</string>
+    <string name="prompt_seat">Seat*</string>
+    <string name="prompt_select_seat">Select a Seat*</string>
+
+    <string name="action_show_my_card">Show My Card</string>
+    <string name="action_save">Save</string>
+    <string name="action_call">Call</string>
+    <string name="agree">Agree</string>
+    <string name="map_direction">Map &#38; Directions</string>
+    <string name="read_more">+ read more</string>
+    <string name="welcome_waiting_list">Welcome to Sushi Tei Online Waiting List</string>
+    <string name="makesure_phone_active">*please make sure your phone number is active</string>
+    <string name="last_queue">Last Queuing:</string>
+    <string name="your_id_number_is">Your ID number is</string>
+    <string name="my_point">My Point</string>
+    <string name="faq">FAQ</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="action_logout">Log out</string>
+    <string name="history_title">History</string>
+    <string name="action_wishlist">+ Wishlist</string>
+    <string name="add_a_new_tag">Add a New Tag and Press + Button</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="about_sushitei">About Sushi Tei Loyalty Program</string>
+    <string name="about_sushitei_title">About Sushi Tei</string>
+    <string name="disclaimer_sushitei_title">Disclaimer Sushi Tei</string>
+    <string name="faq_sushitei_title">FAQ Sushi Tei</string>
+
+
+    <string name="alert_please_note_that">*Please note that we will eliminate your number from waiting list after we call your number 5 times.</string>
+
+    <!-- list for about spinner in contact us -->
+    <string-array name="about_arrays">
+        <item>Event</item>
+        <item>Marketing/PR</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="action_submit">Submit</string>
+    <string name="add_new_wish_list_tag">Add New Wish List Tag</string>
+    <string name="wish_list_add_title">Add New Tag Wish List</string>
+    <string name="wish_list_edit_title">Edit Tag Wish List</string>
+    <string name="name_">Tag name</string>
+    <string name="delete_string">Lorem ipsum dolor sit amet, porro definitionem</string>
+    <string name="action_yes_imsure">Yes, I\'m Sure</string>
+
+    <string name="use_voucher">Use Voucher</string>
+    <string name="get_voucher">Get Voucher</string>
+
+    <string name="info_wl">Info Waiting List</string>
+    <string name="bumped">Thank you for visiting us. Please enjoy your meal.</string>
+    <string name="canceled">Sorry, we already call your number 5 times and you did not show up. Your Number has been cancelled.</string>
+</resources>
+

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "365831390792",
+    "firebase_url": "https://sushiteiapp-1494311723254.firebaseio.com",
+    "project_id": "sushiteiapp-1494311723254",
+    "storage_bucket": "sushiteiapp-1494311723254.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365831390792:android:57368a6f99d99636",
+        "android_client_info": {
+          "package_name": "com.cranium.sushiteimember"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365831390792-slai8iebu3v5ucdmfe2tg20b96qntqfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj03TYECCLaa2SpUkpQge6ii_IiwcAY-M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

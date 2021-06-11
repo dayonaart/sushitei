@@ -1,0 +1,97 @@
+package com.cranium.sushiteiapps.activity;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.cranium.sushiteiapps.App;
+import com.cranium.sushiteiapps.R;
+import com.cranium.sushiteiapps.api.RequestApi;
+import com.cranium.sushiteiapps.model.TermCondition;
+import com.cranium.sushiteiapps.model.response.TermAndConditions;
+import com.cranium.sushiteiapps.util.DatabaseHelper;
+
+import butterknife.BindColor;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+/**
+ * Created by Dayona on 6/12/17.
+ */
+
+public class AboutSushiteiActivity extends AppCompatActivity {
+
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.description) TextView description;
+    @BindView((R.id.title_bar)) TextView titleBar;
+    @BindView(R.id.progress_bar) ProgressBar progressBar;
+    @BindColor(R.color.colorDark) int dark;
+
+    private String tempTerm = "";
+
+    private DatabaseHelper databaseHelper;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @OnClick(R.id.image_back)
+    public void doActionLeft(View view) {
+        onBackPressed();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_about_sushitei);
+        ButterKnife.bind(this);
+        databaseHelper = new DatabaseHelper(this);
+        titleBar.setText("About Sushi Tei Loyalty Program");
+        loadTermAndConditions();
+    }
+
+    private void loadTermAndConditions() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(App.API)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RequestApi requestApi = retrofit.create(RequestApi.class);
+
+        Call<TermAndConditions> call = requestApi.aboutSushitei();
+        call.enqueue(new Callback<TermAndConditions>() {
+            @Override
+            public void onResponse(Call<TermAndConditions> call, Response<TermAndConditions> response) {
+                if (response.raw().isSuccessful()) {
+                    databaseHelper.createAboutSushitei(response.body());
+                }
+
+                for (TermCondition term : databaseHelper.getAllAboutSushitei()) {
+                    tempTerm += term.getDescription();
+                }
+                description.setText(tempTerm);
+                progressBar.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onFailure(Call<TermAndConditions> call, Throwable t) {
+                for (TermCondition term : databaseHelper.getAllAboutSushitei()) {
+                    tempTerm += term.getDescription();
+                }
+                description.setText(tempTerm);
+                progressBar.setVisibility(View.GONE);
+            }
+        });
+    }
+
+}

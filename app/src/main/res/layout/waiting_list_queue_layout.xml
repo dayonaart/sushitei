@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank You!"
+        android:textSize="@dimen/text_size_medium_material"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_width="230dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDark"
+        android:text="You apply waiting list at Sushi Tei"
+        android:id="@+id/waiting_list_at"/>
+
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorGrey2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_id_number_is"/>
+
+        <TextView
+            android:id="@+id/your_number"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9205-B"
+            android:textSize="42sp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/your_number_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There are 6 number queuing before you."/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_width="300dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/alert_please_note_that"
+        android:textSize="@dimen/text_size_caption_material"/>
+
+</LinearLayout>

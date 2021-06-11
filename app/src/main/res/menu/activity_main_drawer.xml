@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" android:id="@+id/group">
+        <item
+            android:id="@+id/nav_whatsnew"
+            android:icon="@drawable/ic_news_outline_24_dp"
+            android:title="@string/whats_new_title" />
+        <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/ic_menu_24_dp"
+            android:title="@string/menu_title" />
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/ic_heart_outline_24_dp"
+            android:title="@string/wish_list_title" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message_outline_24_dp"
+            android:title="@string/message_title" />
+        <item
+            android:id="@+id/nav_storelocation"
+            android:icon="@drawable/ic_store_outline_24_dp"
+            android:title="@string/store_location_title" />
+        <item
+            android:id="@+id/nav_contactus"
+            android:icon="@drawable/ic_contact_outline_24_dp"
+            android:title="@string/contact_us_title" />
+    </group>
+
+    <group android:checkableBehavior="none" android:id="@+id/versions" android:menuCategory="system">
+        <item
+            android:id="@+id/version"
+            android:enabled="false"
+            android:menuCategory="system"
+            android:title="@string/build_version" />
+    </group>
+
+
+</menu>
